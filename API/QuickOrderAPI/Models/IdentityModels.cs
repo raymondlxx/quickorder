@@ -29,5 +29,7 @@ namespace QuickOrderAPI.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<QuickOrderAPI.DBEntity.RestaurantEntity> RestaurantEntities { get; set; }
     }
 }

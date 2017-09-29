@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderAPI", "QuickOrderAPI\QuickOrderAPI.csproj", "{39DDE6F9-687E-482C-9963-B08EFA05269C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickOrderAPI.DBEntity", "QuickOrderAPI.DBEntity\QuickOrderAPI.DBEntity.csproj", "{6BD790FF-E067-4AE2-BD90-A78590AC1E3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{39DDE6F9-687E-482C-9963-B08EFA05269C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39DDE6F9-687E-482C-9963-B08EFA05269C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39DDE6F9-687E-482C-9963-B08EFA05269C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BD790FF-E067-4AE2-BD90-A78590AC1E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD790FF-E067-4AE2-BD90-A78590AC1E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD790FF-E067-4AE2-BD90-A78590AC1E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD790FF-E067-4AE2-BD90-A78590AC1E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

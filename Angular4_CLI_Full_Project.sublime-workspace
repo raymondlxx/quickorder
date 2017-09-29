@@ -1,0 +1,878 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"type",
+				"typeCount\tlocal var"
+			],
+			[
+				"side",
+				"side-menu.component\tscript"
+			],
+			[
+				"const",
+				"constructor\tkeyword"
+			],
+			[
+				"Json",
+				"JSON\tinterface"
+			],
+			[
+				"her",
+				"heroService\tproperty"
+			],
+			[
+				"Inmem",
+				"InMemoryWebApiModule\talias"
+			],
+			[
+				"te",
+				"templateUrl\tproperty"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurant-add.component.ts",
+			"settings":
+			{
+				"buffer_size": 1014,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/leo/works/angular/angular-demo/src/app/app.module.ts",
+			"settings":
+			{
+				"buffer_size": 472,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/leo/works/angular/angular-demo/src/app/app.component.html",
+			"settings":
+			{
+				"buffer_size": 547,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/leo/works/angular/angular-demo/src/app/app.component.ts",
+			"settings":
+			{
+				"buffer_size": 1067,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/leo/works/vue-demo/index.html",
+			"settings":
+			{
+				"buffer_size": 1183,
+				"line_ending": "Unix",
+				"name": "<script src=\"https://cdn.jsdelivr.net/npm/vue\"></s"
+			}
+		},
+		{
+			"file": "Angular4_CLI_Full_Project.sublime-project",
+			"settings":
+			{
+				"buffer_size": 406,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/TypeScript/TypeScript.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/SublimeREPL/sublimerepl_build_system_hack.sublime-build",
+					""
+				],
+				[
+					"Packages/TypeScript/TypeScript.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/TypeScript/TypeScript.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "typescript",
+		"selected_items":
+		[
+			[
+				"typescript",
+				"TypeScript: Format Document"
+			],
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				"pckage instal",
+				"Package Control: Install Package"
+			],
+			[
+				"type",
+				"TypeScript: Format Document"
+			],
+			[
+				"typescrip",
+				"TypeScript: Format Document"
+			],
+			[
+				"types",
+				"TypeScript: Format Document"
+			],
+			[
+				"",
+				"HTMLPrettify"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"sql",
+				"SQL Beautifier: Format Current SQL File"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"JSON",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"typesc",
+				"TypeScript: Format Document"
+			],
+			[
+				"shell",
+				"SublimeREPL: Shell"
+			],
+			[
+				"node",
+				"SublimeREPL: Node"
+			],
+			[
+				"REPL:NO",
+				"SublimeREPL: Node"
+			],
+			[
+				"repl",
+				"SublimeREPL: Shell"
+			],
+			[
+				"install package",
+				"Package Control: Install Package"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"instllpa",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"SQL",
+				"SQL Beautifier: Format Current SQL File"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 609.0
+	},
+	"console":
+	{
+		"height": 186.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/leo/works/quickorder",
+		"/D/leo/study/opensource/angular-realworld-example-app",
+		"/D/leo/study/opensource/angular-realworld-example-app/src",
+		"/D/leo/study/opensource/angular-realworld-example-app/src/app",
+		"/D/leo/study/opensource/angular-realworld-example-app/src/app/article",
+		"/D/leo/study/opensource/angular-realworld-example-app/src/app/home",
+		"/D/leo/works/vue-demo"
+	],
+	"file_history":
+	[
+		"/D/leo/works/angular/angular-demo/src/app/app.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/node_modules/@angular/http/src/http.d.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/app.module.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/components.module.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/node_modules/@types/node/index.d.ts",
+		"/D/leo/works/angular/angular-demo/src/app/app.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurant-add.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/node_modules/@angular/common/http/src/client.d.ts",
+		"/D/leo/study/opensource/angularspree/README.md",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurants.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/shared/global.ts",
+		"/D/leo/docs/bugs/object_describe_564991_LeadsObj.json",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/node_modules/@angular/common/http.d.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/categories/categories.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurants.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/components-routing.module.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/providers/api.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/categories/categories.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/categories/category-add.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurant-add.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/categories/category-add.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/models/models.ts",
+		"/D/leo/study/angularjs/tour-of-hero/src/app/service/hero.service.js",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/users/users.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/package.json",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/shopping-carts/shopping-carts.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/shopping-carts/shopping-carts.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/users/users.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/components/app-sidebar/app-sidebar.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/orders/orders.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/orders/orders.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/products/products.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/products/products.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/dinner-tables/dinner-tables.component.html",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/scss/_custom.scss",
+		"/D/leo/works/quickorder/CoreUI-Angular/angular-demo/src/app/app.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/dinner-tables/dinner-tables.component.ts",
+		"/D/leo/works/quickorder/CoreUI-Angular/angular-demo/node_modules/@angular/animations/@angular/animations.js",
+		"/D/leo/works/quickorder/CoreUI-Angular/angular-demo/src/app/app.component.html",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/leo/works/cordova/helloworld/www/js/index.js",
+		"/C/Users/lilei/Desktop/new 18.txt",
+		"/D/leo/works/TellmePWD/.gitignore",
+		"/D/leo/study/opensource/spa-webapi-angularjs/README.md",
+		"/C/Users/lilei/Downloads/hosts",
+		"/D/leo/works/cordova/helloworld/www/index.html",
+		"/C/Users/lilei/VirtualBox VMs/OS X 10.11 El Capitan Retail/Logs/VBox.log",
+		"/D/leo/docs/CR/5.7/配置中心/fstest__fs-crm-java-detailpage-btnprivilege.txt",
+		"/D/leo/docs/CR/5.7/visit/add-visit-action.json",
+		"/D/leo/docs/CR/5.7/visit/update-visit-action.json",
+		"/D/leo/works/TellmePWD/ionic-demo/src/providers/util/password.ts",
+		"/D/leo/docs/CR/5.7/配置中心/ceshi113__fs-crm-java-detailpage-btnprivilege.txt",
+		"/C/Users/lilei/Desktop/web.cs",
+		"/C/Users/lilei/Desktop/android.cs",
+		"/D/leo/works/angular/form-demo/src/index.html",
+		"/D/leo/works/angular/form-demo/src/app/app.component.html",
+		"/D/leo/works/angular/form-demo/src/app/app.module.ts",
+		"/D/leo/works/angular/form-demo/src/app/dashboard/dashboard.module.ts",
+		"/D/leo/works/angular/form-demo/src/app/app.component.ts",
+		"/D/leo/works/spring-cli-demo/app.groovy",
+		"/D/leo/works/angular/form-demo/src/app/admin/admin.module.ts",
+		"/D/leo/works/angular/form-demo/src/app/admin/mdobject/mdobject.module.ts",
+		"/D/leo/works/angular/my-app/src/app/app.module.ts",
+		"/D/leo/works/angular/my-app/src/index.html",
+		"/D/leo/works/angular/my-app/src/app/app.component.ts",
+		"/D/leo/works/angular/my-app/src/app/app.component.html",
+		"/D/leo/study/opensource/echoes-player/src/app/core/index.ts",
+		"/D/leo/study/opensource/echoes-player/src/app/core/store/index.ts",
+		"/D/leo/works/angular/my-app/src/app/shared/site-header/site-header.component.html",
+		"/D/leo/works/angular/my-app/src/app/shared/shared.module.ts",
+		"/D/leo/docs/CR/5.7/fs-crm/create-order/arg.json",
+		"/D/leo/docs/CR/5.7/fs-crm/create-order/new-arg.json",
+		"/D/leo/works/angular/my-app/src/app/app.component.css",
+		"/D/leo/works/angular/my-app/src/app/shared/site-footer/site-footer.component.html",
+		"/D/leo/works/angular/angular-hello-world/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts",
+		"/D/leo/study/opensource/echoes-player/src/app/app.component.ts",
+		"/D/leo/study/opensource/echoes-player/src/app/core/store/reducers.ts",
+		"/D/leo/study/opensource/echoes-player/src/app/core/services/version-checker.service.ts",
+		"/D/leo/study/opensource/echoes-player/src/app/core/services/youtube-data-api.service.ts",
+		"/D/leo/study/opensource/echoes-player/node_modules/@angular/http/src/http.d.ts",
+		"/D/leo/study/opensource/echoes-player/node_modules/@angular/core/src/di/metadata.d.ts",
+		"/D/leo/study/opensource/CoreUI-Free-Bootstrap-Admin-Template/Angular4_CLI_Full_Project/src/app/layouts/full-layout.component.ts",
+		"/D/leo/works/angular/my-app/src/app/shared/side-menu.component.html",
+		"/D/leo/works/angular/my-app/src/app/udobject/udobject.module.ts",
+		"/D/leo/works/angular/my-app/src/app/my-bi/my-bi.module.ts",
+		"/D/leo/works/angular/my-app/src/app/my-console/my-console.module.ts",
+		"/D/leo/works/angular/my-app/src/app/my-notification/my-notification.module.ts",
+		"/D/leo/works/angular/my-app/src/contact.html",
+		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/@angular/http/src/static_response.d.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/chartjs/chartjs.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/dashboard/dashboard.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/icons/icons-routing.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/icons/icons.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/pages/pages-routing.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/pages/pages.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/ngx-bootstrap/tabs/tabs.module.d.ts",
+		"/D/leo/works/client-web/src/app/app.component.ts",
+		"/D/leo/works/client-web/src/app/app.component.html",
+		"/D/leo/works/client-web/src/app/app.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/app.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/components/tables.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/components/components.module.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/@angular/cli/blueprints/ng/files/__path__/app/app.module.ts",
+		"/D/leo/works/client-web/src/app/model/udobject.model.ts",
+		"/D/leo/works/client-web/src/app/udobject-form/udobject-form.component.ts",
+		"/D/leo/works/client-web/src/app/udobject-form/udobject-form.component.html",
+		"/D/leo/works/client-web/src/app/udobject-list/udobject-list.component.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/components/tables.component.ts",
+		"/D/leo/works/client-web/src/app/udobject-list/udobject-list.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobjects/udobjects.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobject/udobject.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/layouts/full-layout.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/app.routing.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/layouts/full-layout.component.ts",
+		"/D/leo/study/angularjs/ng-book.2.Angular.4/ng-book-code/routes/music/package.json",
+		"/D/leo/works/MetadataPlatform/metadata-web/package.json",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobjects/udobjects.component.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobject/udobject.component.ts",
+		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobjects/udobject.ts",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/app/app.component.ts",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/app/footer/footer.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/index.html",
+		"/D/leo/works/MetadataPlatform/metadata-fe/.angular-cli.json",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/app/header/header.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/app/sidebar/sidebar.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/app/udobject-list/udobject-list.component.html",
+		"/D/leo/works/MetadataPlatform/metadata-fe/src/app/app.component.html",
+		"/D/leo/works/angular/metadata-web/src/index.html"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 182.0,
+		"where_history":
+		[
+			"",
+			"D:\\leo\\study\\opensource\\echoes-player",
+			"",
+			"D:\\SVN\\Documents\\FS\\furtherSql",
+			"",
+			"D:\\leo\\study\\opensource\\AngularWebApiCrud\\SM.Store.WebApi",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"group",
+			"price",
+			"edit",
+			"item.Name",
+			"ngFor",
+			"4.3.6",
+			"Category",
+			"\\\"",
+			"\\n",
+			"owner",
+			"AppBrandModule",
+			"app-player",
+			"YoutubeSearch",
+			"DashboardModule",
+			"src/app/udobject/",
+			"//",
+			"src/app/my-console",
+			"src/app/my-bi/",
+			"BrowserModule",
+			"TablesComponent",
+			"url",
+			"contentSecurityPolicy",
+			"appAsideMenuToggler",
+			"router-outlet",
+			"creativeLabs",
+			"RouterModule",
+			"getHeroesSlowly",
+			"GetObjectFactory",
+			"Predicate",
+			"EIInt32IDS",
+			"DataId",
+			"5047",
+			"charts.html",
+			"not found in JSON. Path",
+			"Required property",
+			"10.0",
+			"1992",
+			"box col-md-12",
+			"GoogleActiveViewClass",
+			"gwd-taparea",
+			"gwd-image",
+			"http://",
+			"paas-org.nsvc.foneshare.cn",
+			"paas-privilege.nsvc.foneshare.cn",
+			"QueryUserRoleCodesByUsers",
+			"auth",
+			"auth-",
+			"auth",
+			".auth.",
+			"paas-privilege.nsvc.foneshare.cn",
+			"auth",
+			"paas-org.nsvc.foneshare.cn",
+			"group",
+			"PAAS.GROUP.MEM",
+			"paas-org.nsvc.foneshare.cn",
+			"paas-privilege.nsvc.foneshare.cn",
+			"}\n",
+			"paas-org.nsvc.foneshare.cn",
+			"paas-privilege.nsvc.foneshare.cn",
+			"QueryUserRoleCodesByUsers",
+			"fs.paas.auth",
+			"QueryUserRolesByUsers",
+			"QueryFunction",
+			"QueryRoleInfoWithCodes",
+			"QueryRoleUsersByRoles",
+			"QueryRoleCodeListByUserId",
+			"queryRoleCodeListByUserId",
+			"QueryUserRoleCodesByUsers",
+			"10.112.32.47:8003",
+			"group",
+			"10.112.32.47:8006",
+			"10.112.32.46:8005",
+			"\"\"",
+			",",
+			"GroupPageResult",
+			"ListPageResult",
+			"UserListArg",
+			"?",
+			"？",
+			"; ",
+			"QueryRoleUsersByRoles",
+			"fs-paas-auth.QueryRoleUsersByRoles",
+			"http://10.113.32.47:8003/fs-paas-auth",
+			"10.112.32.47:8002",
+			"QueryGroupByIdListAsync",
+			"RoleFunctionEntity",
+			"Owner",
+			"employee",
+			"CustomerLimitInfo",
+			"V5EmployeeSolidEntity",
+			"10.113.32.47:8003",
+			"\\\"",
+			"Opportunity",
+			"MarketingEventID",
+			"V5EmployeeSolidEntity",
+			"EmployeeRoleScopeInfoList",
+			"group",
+			"roleFuncPermiss",
+			"=",
+			";",
+			")",
+			"(",
+			" \"tenantId\": \"2\"",
+			"查看列表",
+			"fs-paas-auth",
+			"10.113.32.47",
+			"visit",
+			"InventoryTeamMember",
+			"CustomerTeamMember",
+			"VisitTeamMember",
+			"TradeBillTeamMember",
+			"TradeRefundTeamMember",
+			"TradePaymentTeamMember",
+			"ContractTeamMember",
+			"ReturnOrderTeamMember",
+			"CustomerOrderTeamMember",
+			"OpportunityTeamMember",
+			"ContactTeamMember",
+			"SalesClueTeamMember",
+			"CustomerTeamMember",
+			"608bc9d422b7404db6844bb5d1e13d46",
+			"10003",
+			"6222"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"item.name",
+			"4.1.3",
+			"\"",
+			"",
+			"/",
+			"",
+			"paas.nsvc.foneshare.cn",
+			"paas-org.nsvc.foneshare.cn",
+			"paas-privilege.nsvc.foneshare.cn",
+			"\"",
+			",\\n",
+			";\\n",
+			"http://10.112.32.47:8006/fs-paas-auth",
+			"10.113.32.47:8005",
+			"SharedObjectEntity",
+			"10.112.32.47:8006",
+			"\"",
+			":",
+			",",
+			" }",
+			" {",
+			" \"tenantId\": \"53431\"",
+			"MarketingEventTeamMember",
+			"InventoryTeamMember",
+			"ProductTeamMember",
+			"VisitTeamMember",
+			"TradeBillTeamMember",
+			"TradeRefundTeamMember",
+			"TradePaymentTeamMember",
+			"ContractTeamMember",
+			"ReturnOrderTeamMember",
+			"CustomerOrderTeamMember",
+			"OpportunityTeamMember",
+			"ContactTeamMember",
+			"SalesClueTeamMember"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurant-add.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1014,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								161,
+								58
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/D/leo/works/angular/angular-demo/src/app/app.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								410,
+								410
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/leo/works/angular/angular-demo/src/app/app.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 547,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								262,
+								262
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 108.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/D/leo/works/angular/angular-demo/src/app/app.component.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1067,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								821,
+								821
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/D/leo/works/vue-demo/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								537,
+								537
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<script src=\"https://cdn.jsdelivr.net/npm/vue\"></s",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Angular4_CLI_Full_Project.sublime-project",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
+								400
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.doc":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 142.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Angular4_CLI_Full_Project.sublime-project",
+	"replace":
+	{
+		"height": 53.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 478.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
