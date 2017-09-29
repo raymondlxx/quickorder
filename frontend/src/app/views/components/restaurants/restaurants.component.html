@@ -17,16 +17,16 @@
           <thead>
             <tr>
               <th>名称</th>
-              <th>创建时间</th>
-              <th>更新时间</th>
+              <th>地址</th>
+              <th>电话</th>
               <th>操作</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let item of items">
               <td>{{item.name}}</td>
-              <td>{{item.createTime}}</td>
-              <td>{{item.updateTime}}</td>
+              <td>{{item.address}}</td>
+              <td>{{item.tel}}</td>
               <td>
                 <span class="badge badge-success">编辑</span> |
                 <span class="badge badge-danger">删除</span>
@@ -52,4 +52,3 @@
   <!--/.col-->
 </div>
 <!--/.row-->
-<app-restaurant-add #restaurantAddModal></app-restaurant-add>

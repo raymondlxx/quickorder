@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RestaurantService } from '../../../shared/services/restaurant.service';
+import { Response } from '@angular/http';
 @Component({
-  selector: 'app-restaurants',
-  templateUrl: './restaurants.component.html',
-  styleUrls: ['./restaurants.component.scss']
+	selector: 'app-restaurants',
+	templateUrl: './restaurants.component.html',
+	styleUrls: ['./restaurants.component.scss'],
+	providers:[RestaurantService]
 })
 export class RestaurantsComponent implements OnInit {
 
-	title:string;
+	title: string;
 	items: Array<{ name: string, createTime: number, updateTime: number }>;
-	constructor() { }
+	constructor(private service: RestaurantService) { }
 
 	ngOnInit() {
 		this.title = "餐厅";
-		this.items = [];
-		for (let i = 1; i < 11; i++) {
-			this.items.push({
-				name: this.title+'-' + i,
-				createTime: new Date().getTime(),
-				updateTime: new Date().getTime()
-			});
-		}
+
+		this.service.getAll().subscribe((res: Response) => {
+			this.items = res.json();
+		});
+
 
 	}
 

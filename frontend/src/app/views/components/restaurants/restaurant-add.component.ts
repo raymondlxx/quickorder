@@ -21,7 +21,7 @@ export class RestaurantAddComponent implements OnInit {
 	constructor(public http: Http) { }
 
 	ngOnInit() {
-
+		
 	}
 
 	onSubmit() {
@@ -32,7 +32,7 @@ export class RestaurantAddComponent implements OnInit {
 			'Method': 'POST'
 		})};
 
-		this.http.post('http://localhost:8888/api/restaurants', JSON.stringify(body),options)
+		this.http.post('http://localhost:7777/api/restaurants', JSON.stringify(body),options)
 		.subscribe((res: Response) => {
 			console.log(res.json());
 

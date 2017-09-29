@@ -36,6 +36,7 @@ import { OrdersComponent } from './orders/orders.component';
 import { ShoppingCartsComponent } from './shopping-carts/shopping-carts.component';
 import { UsersComponent } from './users/users.component';
 
+
 @NgModule({
     imports: [
         FormsModule,
@@ -64,7 +65,7 @@ import { UsersComponent } from './users/users.component';
         ProductsComponent,
         OrdersComponent,
         ShoppingCartsComponent,
-        UsersComponent,
+        UsersComponent
     ]
 })
 export class ComponentsModule { }

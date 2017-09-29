@@ -15,16 +15,17 @@ using AutoMapper;
 
 namespace QuickOrderAPI.Controllers
 {
-    
+
     [RoutePrefix("api/restaurants")]
     public class RestaurantsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Restaurants
-        public IQueryable<RestaurantEntity> GetRestaurants()
+        public List<RestaurantModel> GetRestaurants()
         {
-            return db.RestaurantEntities;
+            var items = db.RestaurantEntities.ToList();
+            return Mapper.Map<List<RestaurantEntity>, List<RestaurantModel>>(items);
         }
 
         // GET: api/Restaurants/5
@@ -75,7 +76,7 @@ namespace QuickOrderAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        
+
         // POST: api/Restaurants
         [ResponseType(typeof(RestaurantModel))]
         public IHttpActionResult PostRestaurantModel(RestaurantModel model)
