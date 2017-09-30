@@ -10,5 +10,11 @@ namespace QuickOrderAPI.DBEntity
     [Table("Product")]
     public class ProductEntity:BaseEntity
     {
+        public string Name { get; set; }
+
+        public int CategoryID { get; set; }
+
+        public virtual ProductCategoryEntity Category { get; set; }
+
     }
 }

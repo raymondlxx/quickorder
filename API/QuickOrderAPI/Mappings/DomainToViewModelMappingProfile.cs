@@ -18,6 +18,7 @@ namespace QuickOrderAPI.Mappings
         public DomainToViewModelMappingProfile()
         {
             CreateMap<RestaurantEntity, RestaurantModel>();
+            CreateMap<ProductCategoryEntity, CategoryModel>();
         }
     }
 }

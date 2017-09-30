@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"n",
+				"navigate\tmethod"
+			],
+			[
 				"config",
 				"app.config\tscript"
 			],
@@ -44,10 +48,10 @@
 	"buffers":
 	[
 		{
-			"file": "src/app/shared/services/restaurant.service.ts",
+			"file": "src/app/views/components/restaurants/restaurant-add.component.ts",
 			"settings":
 			{
-				"buffer_size": 573,
+				"buffer_size": 1069,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -56,17 +60,16 @@
 			"file": "src/app/views/components/restaurants/restaurants.component.ts",
 			"settings":
 			{
-				"buffer_size": 980,
+				"buffer_size": 1223,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/leo/works/angular/angular-demo/src/app/app.component.ts",
+			"file": "node_modules/@angular/http/src/http.d.ts",
 			"settings":
 			{
-				"buffer_size": 1082,
-				"encoding": "UTF-8",
+				"buffer_size": 5105,
 				"line_ending": "Unix"
 			}
 		},
@@ -74,35 +77,26 @@
 			"file": "src/app/views/components/restaurants/restaurants.component.html",
 			"settings":
 			{
-				"buffer_size": 1774,
+				"buffer_size": 1800,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/leo/works/TellmePWD/TellmePWD/packages.config",
+			"file": "src/app/views/components/restaurants/restaurant-add.component.html",
 			"settings":
 			{
-				"buffer_size": 3648,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/views/components/restaurants/restaurant-add.component.ts",
-			"settings":
-			{
-				"buffer_size": 1054,
+				"buffer_size": 1164,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/D/leo/works/WebApplicationAPI/WebApplicationAPI/Global.asax.cs",
+			"file": "src/app/models/models.ts",
 			"settings":
 			{
-				"buffer_size": 726,
-				"encoding": "UTF-8 with BOM",
+				"buffer_size": 218,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -263,16 +257,28 @@
 		"/D/leo/works/quickorder/frontend",
 		"/D/leo/works/quickorder/frontend/src",
 		"/D/leo/works/quickorder/frontend/src/app",
+		"/D/leo/works/quickorder/frontend/src/app/models",
 		"/D/leo/works/quickorder/frontend/src/app/views",
 		"/D/leo/works/quickorder/frontend/src/app/views/components",
-		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants"
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants",
+		"/D/leo/works/angular/angular-demo",
+		"/D/leo/works/angular/angular-demo/src",
+		"/D/leo/works/angular/angular-demo/src/app"
 	],
 	"file_history":
 	[
-		"/D/leo/works/quickorder/frontend/src/app/shared/global.ts",
-		"/D/leo/study/opensource/echoes-player/src/app/core/components/index.ts",
 		"/D/leo/works/quickorder/frontend/src/app/shared/services/restaurant.service.ts",
 		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurants.component.ts",
+		"/D/leo/works/angular/angular-demo/src/app/app.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurants.component.html",
+		"/D/leo/works/TellmePWD/TellmePWD/packages.config",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-add.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-add.component.html",
+		"/C/Users/lilei/Documents/NetSarang/Xshell/Sessions/crm.2017-09-29.log/crm.2017-09-29.log",
+		"/D/leo/works/WebApplicationAPI/WebApplicationAPI/Global.asax.cs",
+		"/D/leo/works/WebApplicationAPI/WebApplicationAPI/App_Start/WebApiConfig.cs",
+		"/D/leo/works/quickorder/frontend/src/app/shared/global.ts",
+		"/D/leo/study/opensource/echoes-player/src/app/core/components/index.ts",
 		"/D/leo/works/quickorder/frontend/node_modules/@angular/core/src/di/metadata.d.ts",
 		"/D/leo/works/quickorder/frontend/quickorder-frontend.sublime-project",
 		"/D/leo/study/opensource/angular-realworld-example-app/src/app/shared/services/api.service.ts",
@@ -284,7 +290,6 @@
 		"/D/leo/works/quickorder/frontend/src/app/providers/api.ts",
 		"/D/leo/works/angular/angular-demo/src/app/app.module.ts",
 		"/D/leo/works/angular/angular-demo/src/app/app.component.html",
-		"/D/leo/works/angular/angular-demo/src/app/app.component.ts",
 		"/D/leo/works/vue-demo/index.html",
 		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/src/app/views/components/restaurants/restaurant-add.component.ts",
 		"/D/leo/works/quickorder/CoreUI-Angular/Angular4_CLI_Full_Project/node_modules/@angular/http/src/http.d.ts",
@@ -389,14 +394,7 @@
 		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/@angular/cli/blueprints/ng/files/__path__/app/app.module.ts",
 		"/D/leo/works/client-web/src/app/model/udobject.model.ts",
 		"/D/leo/works/client-web/src/app/udobject-form/udobject-form.component.ts",
-		"/D/leo/works/client-web/src/app/udobject-form/udobject-form.component.html",
-		"/D/leo/works/client-web/src/app/udobject-list/udobject-list.component.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/components/tables.component.ts",
-		"/D/leo/works/client-web/src/app/udobject-list/udobject-list.component.html",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobjects/udobjects.component.html",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/udobject/udobject.component.html",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/layouts/full-layout.component.html",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/app.routing.ts"
+		"/D/leo/works/client-web/src/app/udobject-form/udobject-form.component.html"
 	],
 	"find":
 	{
@@ -421,6 +419,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"2017-08-314642xs",
 			"ApiService",
 			"group",
 			"price",
@@ -597,43 +596,37 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/app/shared/services/restaurant.service.ts",
+					"file": "src/app/views/components/restaurants/restaurant-add.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 573,
+						"buffer_size": 1069,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								453,
-								453
+								257,
+								257
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -642,141 +635,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 980,
+						"buffer_size": 1223,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								903,
-								903
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/D/leo/works/angular/angular-demo/src/app/app.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1082,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								669,
-								690
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/app/views/components/restaurants/restaurants.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1774,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1729,
-								1729
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 270.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/D/leo/works/TellmePWD/TellmePWD/packages.config",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3648,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2390,
-								2311
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/app/views/components/restaurants/restaurant-add.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1054,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1049,
-								1049
+								1069,
+								1069
 							]
 						],
 						"settings":
@@ -799,33 +666,124 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/D/leo/works/WebApplicationAPI/WebApplicationAPI/Global.asax.cs",
+					"buffer": 2,
+					"file": "node_modules/@angular/http/src/http.d.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 726,
+						"buffer_size": 5105,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								726,
-								726
+								3784,
+								3784
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/views/components/restaurants/restaurants.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1800,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1144,
+								1144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/app/views/components/restaurants/restaurant-add.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								852,
+								852
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/app/models/models.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 218,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								218,
+								218
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
 					"type": "text"
 				}
 			]

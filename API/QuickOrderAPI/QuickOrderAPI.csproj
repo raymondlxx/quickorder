@@ -216,7 +216,9 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductCategoriesController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -225,6 +227,19 @@
     <Compile Include="Mappings\AutoMapperConfiguration.cs" />
     <Compile Include="Mappings\DomainToViewModelMappingProfile.cs" />
     <Compile Include="Mappings\ViewModelToDomainMappingProfile.cs" />
+    <Compile Include="Migrations\201709291115462_InitialCreate.cs" />
+    <Compile Include="Migrations\201709291115462_InitialCreate.Designer.cs">
+      <DependentUpon>201709291115462_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709291504268_add createTime and UpdateTime in the base Entity.cs" />
+    <Compile Include="Migrations\201709291504268_add createTime and UpdateTime in the base Entity.Designer.cs">
+      <DependentUpon>201709291504268_add createTime and UpdateTime in the base Entity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709300805033_category.cs" />
+    <Compile Include="Migrations\201709300805033_category.Designer.cs">
+      <DependentUpon>201709300805033_category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\BaseModels.cs" />
@@ -312,6 +327,17 @@
       <Project>{6bd790ff-e067-4ae2-bd90-a78590ac1e3d}</Project>
       <Name>QuickOrderAPI.DBEntity</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201709291115462_InitialCreate.resx">
+      <DependentUpon>201709291115462_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709291504268_add createTime and UpdateTime in the base Entity.resx">
+      <DependentUpon>201709291504268_add createTime and UpdateTime in the base Entity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709300805033_category.resx">
+      <DependentUpon>201709300805033_category.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

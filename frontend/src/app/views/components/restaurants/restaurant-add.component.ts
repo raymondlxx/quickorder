@@ -16,7 +16,7 @@ export class RestaurantAddComponent implements OnInit {
 
 	@Input() restaurantAddModal;
 
-	model = new Restaurant("", "", "");
+	model = new Restaurant("", "", "","");
 
 	constructor(public http: Http,private router:Router) { }
 
@@ -31,9 +31,9 @@ export class RestaurantAddComponent implements OnInit {
 			'Content-Type': 'application/x-www-form-urlencoded',
 		})};
 
-		this.http.post('http://localhost:7777/api/restaurants', body,options)
+		this.http.post('http://localhost:7777/api/restaurants/Create', body,options)
 		.subscribe((res: Response) => {
-			this.router.navigate(['/components/restaurants'])
+			this.router.navigate(['/components/restaurants']);
 		});
 	}
 

@@ -15,22 +15,23 @@ using AutoMapper;
 
 namespace QuickOrderAPI.Controllers
 {
-
-    [RoutePrefix("api/restaurants")]
+    [RoutePrefix("api/Restaurants")]
     public class RestaurantsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: api/Restaurants
-        public List<RestaurantModel> GetRestaurants()
+        [Route("GetAll")]
+        public List<RestaurantModel> GetAll()
         {
             var items = db.RestaurantEntities.ToList();
             return Mapper.Map<List<RestaurantEntity>, List<RestaurantModel>>(items);
         }
 
         // GET: api/Restaurants/5
+        [Route("GetByID")]
         [ResponseType(typeof(RestaurantEntity))]
-        public IHttpActionResult GetRestaurantEntity(string id)
+        public IHttpActionResult GetByID(string id)
         {
             RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(id);
             if (restaurantEntity == null)
@@ -42,20 +43,17 @@ namespace QuickOrderAPI.Controllers
         }
 
         // PUT: api/Restaurants/5
+        [HttpPut]
+        [Route("Update")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutRestaurantEntity(string id, RestaurantEntity restaurantEntity)
+        public IHttpActionResult Update(RestaurantEntity entity)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            if (id != restaurantEntity.ID)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(restaurantEntity).State = EntityState.Modified;
+            db.Entry(entity).State = EntityState.Modified;
 
             try
             {
@@ -63,7 +61,7 @@ namespace QuickOrderAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!RestaurantEntityExists(id))
+                if (!RestaurantEntityExists(entity.ID))
                 {
                     return NotFound();
                 }
@@ -78,14 +76,14 @@ namespace QuickOrderAPI.Controllers
 
 
         // POST: api/Restaurants
-        [ResponseType(typeof(RestaurantModel))]
-        public IHttpActionResult PostRestaurantModel([FromBody]RestaurantModel model)
+        [HttpPost]
+        [Route("Create")]
+        public IHttpActionResult Create(RestaurantModel model)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
-
 
             RestaurantEntity entity = Mapper.Map<RestaurantModel, RestaurantEntity>(model);
             entity.ID = IDGenerator.GetID();
@@ -101,7 +99,7 @@ namespace QuickOrderAPI.Controllers
             }
             catch (DbUpdateException)
             {
-                if (RestaurantEntityExists(model.ID))
+                if (RestaurantEntityExists(entity.ID))
                 {
                     return Conflict();
                 }
@@ -111,23 +109,22 @@ namespace QuickOrderAPI.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = model.ID }, model);
+            return CreatedAtRoute("DefaultApi", new { id = entity.ID }, entity);
         }
 
         // DELETE: api/Restaurants/5
-        [ResponseType(typeof(RestaurantEntity))]
-        public IHttpActionResult DeleteRestaurantEntity(string id)
+        [HttpPost]
+        [Route("DeleteByID")]
+        public void DeleteByID([FromBody]RestaurantDeleteModel entity)
         {
-            RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(id);
+            RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(entity.ID);
             if (restaurantEntity == null)
             {
-                return NotFound();
+                return;
             }
-
+            
             db.RestaurantEntities.Remove(restaurantEntity);
             db.SaveChanges();
-
-            return Ok(restaurantEntity);
         }
 
         protected override void Dispose(bool disposing)

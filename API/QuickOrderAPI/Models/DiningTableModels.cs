@@ -5,7 +5,11 @@ using System.Web;
 
 namespace QuickOrderAPI.Models
 {
-    public class DiningTableModels : BaseModel
+    public class DiningTableModel : BaseModel
     {
+
+        public string TableNo { get; set; }
+        public string Description { get; set; }
+
     }
 }

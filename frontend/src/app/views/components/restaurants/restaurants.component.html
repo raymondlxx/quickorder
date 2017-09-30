@@ -24,12 +24,12 @@
           </thead>
           <tbody>
             <tr *ngFor="let item of items">
-              <td>{{item.name}}</td>
-              <td>{{item.address}}</td>
-              <td>{{item.tel}}</td>
+              <td>{{item.Name}}</td>
+              <td>{{item.Address}}</td>
+              <td>{{item.Tel}}</td>
               <td>
                 <span class="badge badge-success">编辑</span> |
-                <span class="badge badge-danger">删除</span>
+                <span class="badge badge-danger" (click)="delete(item.ID)">删除</span>
               </td>
             </tr>
           </tbody>

@@ -8,7 +8,13 @@ using System.Threading.Tasks;
 namespace QuickOrderAPI.DBEntity
 {
     [Table("ProductCategory")]
-    public class CategoryEntity:BaseEntity
+    public class ProductCategoryEntity:BaseEntity
     {
+        public string RestaurantID { get; set; }
+
+        public string Name { get; set; }
+
+        public string ParentCategoryID { get; set; }
+
     }
 }
