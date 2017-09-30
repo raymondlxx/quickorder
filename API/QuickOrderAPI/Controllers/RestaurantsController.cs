@@ -79,7 +79,7 @@ namespace QuickOrderAPI.Controllers
 
         // POST: api/Restaurants
         [ResponseType(typeof(RestaurantModel))]
-        public IHttpActionResult PostRestaurantModel(RestaurantModel model)
+        public IHttpActionResult PostRestaurantModel([FromBody]RestaurantModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -89,6 +89,9 @@ namespace QuickOrderAPI.Controllers
 
             RestaurantEntity entity = Mapper.Map<RestaurantModel, RestaurantEntity>(model);
             entity.ID = IDGenerator.GetID();
+            entity.CreateTime = DateTime.Now;
+            entity.UpdateTime = DateTime.Now;
+
             db.RestaurantEntities.Add(entity);
 
 

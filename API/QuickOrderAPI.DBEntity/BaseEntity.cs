@@ -12,5 +12,9 @@ namespace QuickOrderAPI.DBEntity
         [Key]
         public string ID { get; set; }
 
+
+        public DateTime CreateTime { get; set; }
+        public DateTime UpdateTime { get; set; }
+
     }
 }
