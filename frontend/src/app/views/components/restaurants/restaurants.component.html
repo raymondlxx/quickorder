@@ -23,13 +23,12 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of items">
+            <tr *ngFor="let item of items" (click)="viewDetail(item)">
               <td>{{item.Name}}</td>
               <td>{{item.Address}}</td>
               <td>{{item.Tel}}</td>
               <td>
                 <button class="btn btn-info btn-sm" (click)="edit(item);$event.stopPropagation()">编辑</button> |  <button class="btn btn-danger btn-sm" (click)="delete(item);$event.stopPropagation()">删除</button> 
-                
               </td>
             </tr>
           </tbody>

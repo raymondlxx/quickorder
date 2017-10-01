@@ -20,7 +20,8 @@ export class RestaurantsComponent implements OnInit {
 	constructor(
 		private http: Http,
 		private router: Router,
-		private restaurantService: RestaurantService) { }
+		private restaurantService: RestaurantService,
+		private navigatorService: NavigatorService) { }
 
 	ngOnInit() {
 		this.loadAll();
@@ -39,22 +40,14 @@ export class RestaurantsComponent implements OnInit {
 
 			this.loadAll();
 		});
-		// let body = { ID: item.ID };
-
-		// let options = {
-		// 	headers: new Headers({
-		// 		'Content-Type': 'application/x-www-form-urlencoded',
-		// 	})
-		// };
-
-		// this.http.post('http://localhost:7777/Rpi/Restaurants/DeleteByID', body, options)
-		// 	.subscribe((res: Response) => {
-		// 		this.loadAll();
-		// 	});
 
 	}
 	edit(item:Restaurant){
-		
+		this.navigatorService.goToRestaurantEdit(item.ID);
+	}
+
+	viewDetail(item:Restaurant){
+		this.navigatorService.goToRestaurantDetail(item.ID);
 	}
 
 }

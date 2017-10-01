@@ -27,7 +27,7 @@ export class RestaurantService {
 
 		return this.http.get(url)
 			.toPromise()
-			.then(response => response.json().data as Restaurant)
+			.then(response => response.json() as Restaurant)
 			.catch(this.handleError);
 	}
 

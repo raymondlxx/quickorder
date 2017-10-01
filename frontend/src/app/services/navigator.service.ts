@@ -9,4 +9,13 @@ export class NavigatorService {
 	goToRestaurants() {
 		this.router.navigate(['/components/restaurants']);
 	}
+
+	goToRestaurantEdit(id: string) {
+		this.router.navigate(['/components/restaurant-add', id]);
+	}
+
+	goToRestaurantDetail(id: string) {
+		this.router.navigate(['/components/restaurant-detail', id]);
+	}
+
 }

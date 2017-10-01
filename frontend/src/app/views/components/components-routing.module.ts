@@ -13,6 +13,7 @@ import { TabsComponent } from './tabs.component';
 // Components Routing
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { RestaurantAddComponent } from './restaurants/restaurant-add.component';
+import { RestaurantDetailComponent } from './restaurants/restaurant-detail.component';
 import { DinnerTablesComponent } from './dinner-tables/dinner-tables.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ProductsComponent } from './products/products.component';
@@ -85,6 +86,7 @@ const routes: Routes = [
       },
       {path: 'restaurants',component: RestaurantsComponent,data: {title: '餐馆管理'}},
       {path: 'restaurant-add',component: RestaurantAddComponent,data: null},
+      {path: 'restaurant-detail/:id',component: RestaurantDetailComponent,data: {title:"餐馆详情"}},
       {path: 'categories',component: CategoriesComponent,data: {title: '分类管理'}},
       {path: 'products',component: ProductsComponent,data: {title: '菜品管理'}},
       {path: 'dinner-tables',component: DinnerTablesComponent,data: {title: '餐桌管理'}},
