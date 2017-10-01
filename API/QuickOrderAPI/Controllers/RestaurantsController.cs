@@ -30,7 +30,6 @@ namespace QuickOrderAPI.Controllers
 
         // GET: api/Restaurants/5
         [Route("GetByID")]
-        [ResponseType(typeof(RestaurantEntity))]
         public IHttpActionResult GetByID(string id)
         {
             RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(id);
@@ -42,18 +41,22 @@ namespace QuickOrderAPI.Controllers
             return Ok(restaurantEntity);
         }
 
-        // PUT: api/Restaurants/5
-        [HttpPut]
+
+        [HttpPost]
         [Route("Update")]
         [ResponseType(typeof(void))]
-        public IHttpActionResult Update(RestaurantEntity entity)
+        public IHttpActionResult Update(RestaurantModel entity)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.Entry(entity).State = EntityState.Modified;
+            var item = Mapper.Map<RestaurantEntity>(entity);
+            item.UpdateTime = DateTime.Now;
+
+            db.Entry(item).State = EntityState.Modified;
+
 
             try
             {
@@ -61,7 +64,7 @@ namespace QuickOrderAPI.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!RestaurantEntityExists(entity.ID))
+                if (!RestaurantEntityExists(item.ID))
                 {
                     return NotFound();
                 }
@@ -109,22 +112,24 @@ namespace QuickOrderAPI.Controllers
                 }
             }
 
-            return CreatedAtRoute("DefaultApi", new { id = entity.ID }, entity);
+           var result =  Mapper.Map<RestaurantModel>(entity);
+
+            return Json(result);
         }
 
-        // DELETE: api/Restaurants/5
         [HttpPost]
         [Route("DeleteByID")]
-        public void DeleteByID([FromBody]RestaurantDeleteModel entity)
+        public IHttpActionResult DeleteByID(RestaurantDeleteModel entity)
         {
             RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(entity.ID);
             if (restaurantEntity == null)
             {
-                return;
+                return BadRequest(ModelState);
             }
             
             db.RestaurantEntities.Remove(restaurantEntity);
             db.SaveChanges();
+            return Ok();
         }
 
         protected override void Dispose(bool disposing)

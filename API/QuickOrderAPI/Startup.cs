@@ -14,7 +14,7 @@ namespace QuickOrderAPI
         public void Configuration(IAppBuilder app)
         {
             HttpConfiguration config = new HttpConfiguration();
-      
+        
 
             ConfigureAuth(app);
 

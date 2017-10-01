@@ -29,7 +29,7 @@ namespace QuickOrderAPI
             );
 
             // Other configuration omitted
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+            //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
         }
     }
 }

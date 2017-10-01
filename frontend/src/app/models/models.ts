@@ -7,12 +7,9 @@ export class Category {
 }
 
 export class Restaurant {
-	constructor(
-		public Name: string,
-		public Address:string,
-		public Tel:string,
-		public ImagePath:string
-	) { 
-
-	}
+	ID:string;
+	Name: string;
+	Address: string;
+	Tel: string;
+	ImagePath: string;
 }

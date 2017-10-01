@@ -28,8 +28,8 @@
               <td>{{item.Address}}</td>
               <td>{{item.Tel}}</td>
               <td>
-                <span class="badge badge-success">编辑</span> |
-                <span class="badge badge-danger" (click)="delete(item.ID)">删除</span>
+                <button class="btn btn-info btn-sm" (click)="edit(item);$event.stopPropagation()">编辑</button> |  <button class="btn btn-danger btn-sm" (click)="delete(item);$event.stopPropagation()">删除</button> 
+                
               </td>
             </tr>
           </tbody>
