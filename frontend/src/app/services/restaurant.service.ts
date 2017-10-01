@@ -23,9 +23,10 @@ export class RestaurantService {
 	}
 
 	getRestaurant(id: string): Promise<Restaurant> {
-		const url = `${this.restaurantsUrl}/GetByID/${id}`;
+		const url = `${this.restaurantsUrl}/GetByID`;
 
-		return this.http.get(url)
+		return this.http
+			.post(url, {id:id}, { headers: this.headers })
 			.toPromise()
 			.then(response => response.json() as Restaurant)
 			.catch(this.handleError);
@@ -38,7 +39,7 @@ export class RestaurantService {
 		return this.http
 			.post(url, JSON.stringify(item), { headers: this.headers })
 			.toPromise()
-			.then(() => item)
+			.then(response => response.json() as Restaurant)
 			.catch(this.handleError);
 	}
 
@@ -48,7 +49,7 @@ export class RestaurantService {
 		return this.http
 			.post(url, JSON.stringify(item), { headers: this.headers })
 			.toPromise()
-			.then(res => res.json() as Restaurant)
+			.then(response => response.json() as Restaurant)
 			.catch(this.handleError);
 	}
 

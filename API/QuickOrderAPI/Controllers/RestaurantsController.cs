@@ -20,7 +20,7 @@ namespace QuickOrderAPI.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: api/Restaurants
+        [HttpGet]
         [Route("GetAll")]
         public List<RestaurantModel> GetAll()
         {
@@ -28,11 +28,11 @@ namespace QuickOrderAPI.Controllers
             return Mapper.Map<List<RestaurantEntity>, List<RestaurantModel>>(items);
         }
 
-        // GET: api/Restaurants/5
+        [HttpPost]
         [Route("GetByID")]
-        public IHttpActionResult GetByID(string id)
+        public IHttpActionResult GetByID(GetRestaurantByIDRequest request)
         {
-            RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(id);
+            RestaurantEntity restaurantEntity = db.RestaurantEntities.Find(request.ID);
             if (restaurantEntity == null)
             {
                 return NotFound();

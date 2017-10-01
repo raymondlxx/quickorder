@@ -28,6 +28,10 @@ namespace QuickOrderAPI.Models
     public class RestaurantDeleteModel
     {
         public string ID { get; set; }
+    }
 
+    public class GetRestaurantByIDRequest
+    {
+        public string ID { get; set; }
     }
 }
