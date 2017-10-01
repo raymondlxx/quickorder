@@ -26,16 +26,6 @@ import { TabsComponent } from './tabs.component';
 
 // Components Routing
 import { ComponentsRoutingModule } from './components-routing.module';
-import { RestaurantsComponent } from './restaurants/restaurants.component';
-import { RestaurantAddComponent } from './restaurants/restaurant-add.component';
-import { RestaurantDetailComponent } from './restaurants/restaurant-detail.component';
-import { DinnerTablesComponent } from './dinner-tables/dinner-tables.component';
-import { CategoriesComponent } from './categories/categories.component';
-import { CategoryAddComponent } from './categories/category-add.component';
-import { ProductsComponent } from './products/products.component';
-import { OrdersComponent } from './orders/orders.component';
-import { ShoppingCartsComponent } from './shopping-carts/shopping-carts.component';
-import { UsersComponent } from './users/users.component';
 
 
 
@@ -58,17 +48,7 @@ import { UsersComponent } from './users/users.component';
         SocialButtonsComponent,
         SwitchesComponent,
         TablesComponent,
-        TabsComponent,
-        RestaurantsComponent,
-        RestaurantAddComponent,
-        RestaurantDetailComponent,
-        DinnerTablesComponent,
-        CategoriesComponent,
-        CategoryAddComponent,
-        ProductsComponent,
-        OrdersComponent,
-        ShoppingCartsComponent,
-        UsersComponent
+        TabsComponent
     ]
 })
 export class ComponentsModule { }

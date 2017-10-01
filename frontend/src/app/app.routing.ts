@@ -39,7 +39,36 @@ export const routes: Routes = [
       {
         path: 'charts',
         loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+      },
+      {
+        path: 'restaurants',
+        loadChildren: './views/restaurants/restaurants.module#RestaurantsModule'
+      },
+      {
+        path: 'dinner-tables',
+        loadChildren: './views/dinner-tables/dinner-tables.module#DinnerTablesModule'
+      },
+      {
+        path: 'categories',
+        loadChildren: './views/categories/categories.module#CategoriesModule'
+      },
+      {
+        path: 'products',
+        loadChildren: './views/products/products.module#ProductsModule'
+      },
+      {
+        path: 'shopping-carts',
+        loadChildren: './views/shopping-carts/shopping-carts.module#ShoppingCartsModule'
+      },
+      {
+        path: 'orders',
+        loadChildren: './views/orders/orders.module#OrdersModule'
+      },
+      {
+        path: 'users',
+        loadChildren: './views/users/users.module#UsersModule'
       }
+
     ]
   },
   {
@@ -58,7 +87,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

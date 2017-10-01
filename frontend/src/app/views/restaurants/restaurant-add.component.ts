@@ -2,18 +2,21 @@ import { Component, OnInit, Input } from '@angular/core';
 import { RequestOptions, RequestMethod, Headers, Http, Response, URLSearchParams } from '@angular/http';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Observable } from 'rxjs/Rx';
-import { Restaurant } from '../../../models/models';
 import { ModalDirective } from 'ngx-bootstrap/modal/modal.component';
-import { RestaurantService } from '../../../services/restaurant.service';
-import { NavigatorService } from '../../../services/navigator.service';
-import 'rxjs/add/operator/switchMap';
+
+import { Restaurant } from '../../models/models';
+import { RestaurantService } from '../../services/restaurant.service';
+import { NavigatorService } from '../../services/navigator.service';
+
+
+
 @Component({
-	selector: 'app-restaurant-detail',
-	templateUrl: './restaurant-detail.component.html',
-	styleUrls: ['./restaurant-detail.component.scss'],
+	selector: 'app-restaurant-add',
+	templateUrl: './restaurant-add.component.html',
+	styleUrls: ['./restaurant-add.component.scss'],
 	providers: [RestaurantService, NavigatorService]
 })
-export class RestaurantDetailComponent implements OnInit {
+export class RestaurantAddComponent implements OnInit {
 
 	private model: Restaurant = new Restaurant();
 	private isEdit: boolean = false;
@@ -31,4 +34,13 @@ export class RestaurantDetailComponent implements OnInit {
 			.subscribe(item => this.model = item);
 	}
 
+	onSubmit() {
+
+		let item = this.model;
+
+		this.service.create(item).then(() => {
+			this.navigatorService.goToRestaurants();
+		});
+
+	}
 }

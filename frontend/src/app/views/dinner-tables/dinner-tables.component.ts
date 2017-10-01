@@ -1,19 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestOptions, RequestMethod, Headers, Http, Response, URLSearchParams } from '@angular/http';
-import { Restaurant } from '../../../models/models';
+import { Restaurant } from '../../models/models';
 import { Router } from '@angular/router';
-import { RestaurantService } from '../../../services/restaurant.service';
-import { NavigatorService } from '../../../services/navigator.service';
+import { RestaurantService } from '../../services/restaurant.service';
+import { NavigatorService } from '../../services/navigator.service';
+
+
 
 @Component({
-	selector: 'app-restaurants',
-	templateUrl: './restaurants.component.html',
-	styleUrls: ['./restaurants.component.scss'],
+	selector: 'app-dinner-tables',
+	templateUrl: './dinner-tables.component.html',
+	styleUrls: ['./dinner-tables.component.scss'],
 	providers: [RestaurantService, NavigatorService]
 })
-export class RestaurantsComponent implements OnInit {
-
-	title: string = "餐厅";
+export class DinnerTablesComponent implements OnInit {
+	title: string = "餐桌";
 	items: Restaurant[];
 
 
@@ -49,5 +50,4 @@ export class RestaurantsComponent implements OnInit {
 	viewDetail(item:Restaurant){
 		this.navigatorService.goToRestaurantDetail(item.ID);
 	}
-
 }

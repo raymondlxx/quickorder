@@ -5,7 +5,9 @@
         <i class="fa fa-align-justify"></i> {{title}}
         <div class="dt-opt-box">
           <div class="btn-groups">
+              <a class="nav-link" routerLinkActive="active" [routerLink]="['/restaurants/restaurant-add']">
             <button class="btn btn-primary" type="button">新建</button>
+            </a>
           </div>
         </div>
       </div>
@@ -14,19 +16,18 @@
           <thead>
             <tr>
               <th>名称</th>
-              <th>创建时间</th>
-              <th>更新时间</th>
+              <th>地址</th>
+              <th>电话</th>
               <th>操作</th>
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let item of items">
-              <td>{{item.name}}</td>
-              <td>{{item.createTime}}</td>
-              <td>{{item.updateTime}}</td>
+            <tr *ngFor="let item of items" (click)="viewDetail(item)">
+              <td>{{item.Name}}</td>
+              <td>{{item.Address}}</td>
+              <td>{{item.Tel}}</td>
               <td>
-                <span class="badge badge-success">编辑</span> |
-                <span class="badge badge-danger">删除</span>
+                <button class="btn btn-info btn-sm" (click)="edit(item);$event.stopPropagation()">编辑</button> |  <button class="btn btn-danger btn-sm" (click)="delete(item);$event.stopPropagation()">删除</button> 
               </td>
             </tr>
           </tbody>
