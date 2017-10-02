@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
-import { Restaurant } from '../models/models';
+import { Restaurant,GetByQueryRequest,GetByQueryResponse } from '../models/models';
 
 import 'rxjs/add/operator/toPromise';
 
@@ -19,6 +19,16 @@ export class RestaurantService {
 			.then(response =>
 				response.json() as Restaurant[]
 			)
+			.catch(this.handleError);
+	}
+
+	getRestaurantsByQuery(request:GetByQueryRequest): Promise<GetByQueryResponse> {
+		const url = `${this.restaurantsUrl}/GetByQuery`;
+
+		return this.http
+			.post(url,request , { headers: this.headers })
+			.toPromise()
+			.then(response => response.json() as GetByQueryResponse)
 			.catch(this.handleError);
 	}
 

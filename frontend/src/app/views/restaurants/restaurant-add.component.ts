@@ -29,9 +29,9 @@ export class RestaurantAddComponent implements OnInit {
 	) { }
 
 	ngOnInit() {
-		this.route.params
-			.switchMap((params: Params) => this.service.getRestaurant(params['id']))
-			.subscribe(item => this.model = item);
+		// this.route.params
+		// 	.switchMap((params: Params) => this.service.getRestaurant(params['id']))
+		// 	.subscribe(item => this.model = item);
 	}
 
 	onSubmit() {

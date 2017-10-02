@@ -1,0 +1,16 @@
+<nav>
+	<ul class="pagination" *ngIf="pageList">
+		<li class="page-item">
+			<span class="badge badge-pill badge-danger">{{this.totalCount}}</span><span>条记录|当前第{{this.pageIndex}}页/共{{getPageCount()}}页</span>
+		</li>
+		<li class="page-item">
+			<button class="btn btn-outline-secondary btn-sm" (click)="prev()"  [disabled]="this.pageIndex <= 1">上一页</button>
+		</li>
+		<li class="page-item " *ngFor="let item of pageList">
+			<button class="btn btn-outline-secondary btn-sm" (click)="goto(item.pageid)">{{item.pageid}}</button>
+		</li>
+		<li class="page-item">
+			<button class="btn btn-outline-secondary btn-sm" (click)="next()" [disabled]="this.pageIndex >= this.getPageCount()">下一页</button>
+		</li>
+	</ul>
+</nav>

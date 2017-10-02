@@ -29,6 +29,36 @@ namespace QuickOrderAPI.Controllers
         }
 
         [HttpPost]
+        [Route("GetByQuery")]
+        public GetByQueryResponse<List<RestaurantModel>> GetByQuery(GetByQueryRequest request)
+        {
+            GetByQueryResponse<List<RestaurantModel>> result = new GetByQueryResponse<List<RestaurantModel>>();
+            var pageIndex = request.Paging.PageIndex;
+            if (pageIndex <= 0)
+            {
+                pageIndex = 1;
+            }
+            var pageSize = request.Paging.PageSize;
+            result.TotalCount = db.RestaurantEntities.Count();
+           
+            var totalPageCount = result.TotalCount / pageSize;
+
+            if (result.TotalCount % pageSize != 0)
+            {
+                totalPageCount++;
+            }
+            if(pageIndex> totalPageCount)
+            {
+                pageIndex = totalPageCount;
+            }
+            result.PageIndex = pageIndex;
+            var items = db.RestaurantEntities.OrderByDescending(item => item.UpdateTime).Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
+            result.Items =  Mapper.Map<List<RestaurantEntity>, List<RestaurantModel>>(items);
+            return result;
+        }
+
+        [HttpPost]
         [Route("GetByID")]
         public IHttpActionResult GetByID(GetRestaurantByIDRequest request)
         {

@@ -14,4 +14,23 @@ namespace QuickOrderAPI.Models
         public DateTime UpdateTime { get; set; }
 
     }
+
+
+    public class GetByQueryRequest
+    {
+        public PagingParam Paging { get; set; }
+
+    }
+
+    public class GetByQueryResponse<T> {
+        public int TotalCount { get; set; }
+        public int PageIndex { get; set; }
+        public T Items { get; set; }
+    }
+
+    public class PagingParam
+    {
+        public int PageIndex { get; set; }
+        public int PageSize { get; set; }
+    }
 }

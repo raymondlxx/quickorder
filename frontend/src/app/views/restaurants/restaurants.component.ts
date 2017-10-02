@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestOptions, RequestMethod, Headers, Http, Response, URLSearchParams } from '@angular/http';
-import { Restaurant } from '../../models/models';
+import { Restaurant, GetByQueryRequest, GetByQueryResponse, PagingArg } from '../../models/models';
 import { Router } from '@angular/router';
 import { RestaurantService } from '../../services/restaurant.service';
 import { NavigatorService } from '../../services/navigator.service';
+
 
 @Component({
 	selector: 'app-restaurants',
@@ -15,7 +16,9 @@ export class RestaurantsComponent implements OnInit {
 
 	title: string = "餐厅";
 	items: Restaurant[];
-
+	pageSize: number = 10;
+	pageIndex: number = 1;
+	totalCount: number = 0;
 
 	constructor(
 		private http: Http,
@@ -28,25 +31,40 @@ export class RestaurantsComponent implements OnInit {
 	}
 
 
+	bindpage(pageIndex: number) {
+		this.pageIndex = pageIndex;
+		this.loadAll();
+	}
+
 	loadAll() {
 		let self = this;
-		let result = this.restaurantService.getRestaurants();
-		result.then(restaurants => self.items = restaurants);
+
+		let arg = new GetByQueryRequest();
+		arg.Paging = new PagingArg(this.pageIndex, this.pageSize);
+
+		let result = this.restaurantService.getRestaurantsByQuery(arg);
+		result.then(response => {
+			let result = response as GetByQueryResponse;
+			self.items = result.Items;
+			self.totalCount = result.TotalCount;
+			self.pageIndex = result.PageIndex;
+			console.log(response);
+		});
 	}
 
 	delete(item: Restaurant) {
 
-		this.restaurantService.delete(item).then(()=>{
+		this.restaurantService.delete(item).then(() => {
 
 			this.loadAll();
 		});
 
 	}
-	edit(item:Restaurant){
+	edit(item: Restaurant) {
 		this.navigatorService.goToRestaurantEdit(item.ID);
 	}
 
-	viewDetail(item:Restaurant){
+	viewDetail(item: Restaurant) {
 		this.navigatorService.goToRestaurantDetail(item.ID);
 	}
 

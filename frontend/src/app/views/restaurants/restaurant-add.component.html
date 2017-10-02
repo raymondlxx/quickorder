@@ -6,19 +6,19 @@
     <div class="card-body">
       <div class="form-group">
         <label for="name">名称</label>
-        <input class="form-control" required [(ngModel)]="model.Name" id="Name" name="Name" placeholder="请填写名称" type="text" #spy>
+        <input class="form-control" autofocus="autofocus" required [(ngModel)]="model.Name" id="Name" name="Name" type="text" #spy>
       </div>
       <div class="form-group">
         <label for="Description">简介</label>
-        <textarea class="form-control" [(ngModel)]="model.Description" id="Description" name="Description" placeholder="请填写简介"></textarea>
+        <textarea class="form-control" [(ngModel)]="model.Description" id="Description" name="Description" ></textarea>
       </div>
       <div class="form-group">
         <label for="address">地址</label>
-        <input class="form-control" [(ngModel)]="model.Address" id="Address" name="Address" placeholder="请填写地址" type="text" #spy>
+        <input class="form-control" [(ngModel)]="model.Address" id="Address" name="Address" type="text" #spy>
       </div>
       <div class="form-group">
         <label for="tel">电话</label>
-        <input class="form-control" [(ngModel)]="model.Tel" id="Tel" name="Tel" placeholder="请填写电话" type="text" #spy>
+        <input class="form-control" [(ngModel)]="model.Tel" id="Tel" name="Tel" type="text" #spy>
       </div>
     </div>
     <div class="card-footer">

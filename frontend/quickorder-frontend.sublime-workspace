@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"products.component\tscript"
+			],
+			[
+				"go",
+				"gotToProductNew\tmethod"
+			],
+			[
 				"Resta",
 				"RestaurantService\talias"
 			],
@@ -14,10 +22,6 @@
 			[
 				"Navi",
 				"NavigatorService\talias"
-			],
-			[
-				"pro",
-				"providers\tproperty"
 			],
 			[
 				"Restaura",
@@ -68,136 +72,77 @@
 	"buffers":
 	[
 		{
-			"contents": "import { Component, OnInit, Input } from '@angular/core';\nimport { RequestOptions, RequestMethod, Headers, Http, Response, URLSearchParams } from '@angular/http';\nimport { Router, ActivatedRoute, Params } from '@angular/router';\nimport { Observable } from 'rxjs/Rx';\nimport { Restaurant } from '../../../models/models';\nimport { ModalDirective } from 'ngx-bootstrap/modal/modal.component';\nimport { RestaurantService } from '../../../services/restaurant.service';\nimport { NavigatorService } from '../../../services/navigator.service';\n\n\n\n@Component({\n\tselector: 'app-restaurant-add',\n\ttemplateUrl: './restaurant-add.component.html',\n\tstyleUrls: ['./restaurant-add.component.scss'],\n\tproviders: [RestaurantService, NavigatorService]\n})\nexport class RestaurantAddComponent implements OnInit {\n\n\tprivate model: Restaurant = new Restaurant();\n\tprivate isEdit: boolean = false;\n\n\tconstructor(public http: Http,\n\t\tprivate router: Router,\n\t\tprivate route: ActivatedRoute,\n\t\tprivate service: RestaurantService,\n\t\tprivate navigatorService: NavigatorService\n\t) { }\n\n\tngOnInit() {\n\t\tthis.route.params\n\t\t\t.switchMap((params: Params) => this.service.getRestaurant(params['id']))\n\t\t\t.subscribe(item => this.model = item);\n\t}\n\n\tonSubmit() {\n\n\t\tlet item = this.model;\n\n\t\tthis.service.create(item).then(() => {\n\t\t\tthis.navigatorService.goToRestaurants();\n\t\t});\n\n\t}\n}\n",
-			"file": "src/app/views/components/restaurants/restaurant-add.component.ts",
-			"file_size": 1359,
-			"file_write_time": 131513189048349940,
+			"file": "src/app/views/dinner-tables/dinner-tables.component.ts",
 			"settings":
 			{
-				"buffer_size": 1351,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/services/navigator.service.ts",
-			"settings":
-			{
-				"buffer_size": 448,
+				"buffer_size": 1312,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/app/components/app-sidebar/app-sidebar.component.html",
+			"file": "src/app/views/categories/categories.component.ts",
 			"settings":
 			{
-				"buffer_size": 5774,
+				"buffer_size": 1343,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/views/categories/categories.component.html",
+			"settings":
+			{
+				"buffer_size": 1880,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/views/categories/categories.module.ts",
+			"settings":
+			{
+				"buffer_size": 639,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/app/views/categories/category-add.component.ts",
+			"settings":
+			{
+				"buffer_size": 1332,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/D/leo/study/opensource/angular-commerce/modules/products-list-component/src/products-list.component.ts",
+			"settings":
+			{
+				"buffer_size": 4203,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/app/services/restaurant.service.ts",
+			"file": "/C/Users/lilei/Downloads/hosts20170918 (1)/hosts20170918/hosts",
 			"settings":
 			{
-				"buffer_size": 1897,
+				"buffer_size": 730308,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "import { Component, OnInit } from '@angular/core';\nimport { RequestOptions, RequestMethod, Headers, Http, Response, URLSearchParams } from '@angular/http';\nimport { Restaurant } from '../../../models/models';\nimport { Router } from '@angular/router';\nimport { RestaurantService } from '../../../services/restaurant.service';\nimport { NavigatorService } from '../../../services/navigator.service';\n\n@Component({\n\tselector: 'app-restaurants',\n\ttemplateUrl: './restaurants.component.html',\n\tstyleUrls: ['./restaurants.component.scss'],\n\tproviders: [RestaurantService, NavigatorService]\n})\nexport class RestaurantsComponent implements OnInit {\n\n\ttitle: string = \"餐厅\";\n\titems: Restaurant[];\n\n\n\tconstructor(\n\t\tprivate http: Http,\n\t\tprivate router: Router,\n\t\tprivate restaurantService: RestaurantService,\n\t\tprivate navigatorService: NavigatorService) { }\n\n\tngOnInit() {\n\t\tthis.loadAll();\n\t}\n\n\n\tloadAll() {\n\t\tlet self = this;\n\t\tlet result = this.restaurantService.getRestaurants();\n\t\tresult.then(restaurants => self.items = restaurants);\n\t}\n\n\tdelete(item: Restaurant) {\n\n\t\tthis.restaurantService.delete(item).then(()=>{\n\n\t\t\tthis.loadAll();\n\t\t});\n\n\t}\n\tedit(item:Restaurant){\n\t\tthis.navigatorService.goToRestaurantEdit(item.ID);\n\t}\n\n\tviewDetail(item:Restaurant){\n\t\tthis.navigatorService.goToRestaurantDetail(item.ID);\n\t}\n\n}\n",
-			"file": "src/app/views/components/restaurants/restaurants.component.ts",
-			"file_size": 1318,
-			"file_write_time": 131513200571080291,
-			"settings":
-			{
-				"buffer_size": 1314,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/views/components/components.module.ts",
-			"settings":
-			{
-				"buffer_size": 2547,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/views/components/components-routing.module.ts",
-			"settings":
-			{
-				"buffer_size": 3252,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "node_modules/@angular/http/src/http.d.ts",
-			"settings":
-			{
-				"buffer_size": 5105,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<div class=\"row\">\n  <div class=\"col-lg-12\">\n    <div class=\"card\">\n      <div class=\"card-header\">\n        <i class=\"fa fa-align-justify\"></i> {{title}}\n        <div class=\"dt-opt-box\">\n          <div class=\"btn-groups\">\n            \n              <a class=\"nav-link\" routerLinkActive=\"active\" [routerLink]=\"['/components/restaurant-add']\">\n            <button class=\"btn-lg btn-primary\" type=\"button\">新建</button>\n            </a>\n          </div>\n        </div>\n      </div>\n      <div class=\"card-body\">\n        <table class=\"table table-bordered table-striped table-sm\">\n          <thead>\n            <tr>\n              <th>名称</th>\n              <th>地址</th>\n              <th>电话</th>\n              <th>操作</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr *ngFor=\"let item of items\" (click)=\"viewDetail(item)\">\n              <td>{{item.Name}}</td>\n              <td>{{item.Address}}</td>\n              <td>{{item.Tel}}</td>\n              <td>\n                <button class=\"btn btn-info btn-sm\" (click)=\"edit(item);$event.stopPropagation()\">编辑</button> |  <button class=\"btn btn-danger btn-sm\" (click)=\"delete(item);$event.stopPropagation()\">删除</button> \n              </td>\n            </tr>\n          </tbody>\n        </table>\n        <nav>\n          <ul class=\"pagination\">\n            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Prev</a></li>\n            <li class=\"page-item active\">\n              <a class=\"page-link\" href=\"#\">1</a>\n            </li>\n            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">2</a></li>\n            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">3</a></li>\n            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">4</a></li>\n            <li class=\"page-item\"><a class=\"page-link\" href=\"#\">Next</a></li>\n          </ul>\n        </nav>\n      </div>\n    </div>\n  </div>\n  <!--/.col-->\n</div>\n<!--/.row-->\n",
-			"file": "src/app/views/components/restaurants/restaurants.component.html",
-			"file_size": 1923,
-			"file_write_time": 131513299893112794,
-			"settings":
-			{
-				"buffer_size": 1895,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<div class=\"card\">\n  <form action=\"\" method=\"post\" (ngSubmit)=\"onSubmit()\" #restaurantAddForm=\"ngForm\">\n    <div class=\"card-header\">\n      <strong>添加餐馆</strong>\n    </div>\n    <div class=\"card-body\">\n      <div class=\"form-group\">\n        <label for=\"name\">名称</label>\n        <input class=\"form-control\" required [(ngModel)]=\"model.Name\" id=\"Name\" name=\"Name\" placeholder=\"请填写名称\" type=\"text\" #spy>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"Description\">简介</label>\n        <textarea class=\"form-control\" [(ngModel)]=\"model.Description\" id=\"Description\" name=\"Description\" placeholder=\"请填写简介\"></textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"address\">地址</label>\n        <input class=\"form-control\" [(ngModel)]=\"model.Address\" id=\"Address\" name=\"Address\" placeholder=\"请填写地址\" type=\"text\" #spy>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"tel\">电话</label>\n        <input class=\"form-control\" [(ngModel)]=\"model.Tel\" id=\"Tel\" name=\"Tel\" placeholder=\"请填写电话\" type=\"text\" #spy>\n      </div>\n    </div>\n    <div class=\"card-footer\">\n      <button class=\"btn btn-sm btn-primary\" type=\"submit\" [disabled]=\"!restaurantAddForm.form.valid\">\n        <i class=\"fa fa-dot-circle-o\"></i> 保存</button>\n      <button class=\"btn btn-sm btn-danger\" type=\"reset\"><i class=\"fa fa-ban\"></i> 重置</button>\n    </div>\n  </form>\n</div>\n",
-			"file": "src/app/views/components/restaurants/restaurant-add.component.html",
+			"contents": "<div class=\"card\">\n  <form action=\"\" method=\"post\" (ngSubmit)=\"onSubmit()\" #categoryAddForm=\"ngForm\">\n    <div class=\"card-header\">\n      <strong>添加餐馆</strong>\n    </div>\n    <div class=\"card-body\">\n      <div class=\"form-group\">\n        <label for=\"name\">名称</label>\n        <input class=\"form-control\" required [(ngModel)]=\"model.Name\" id=\"Name\" name=\"Name\" placeholder=\"请填写名称\" type=\"text\" #spy>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"Description\">简介</label>\n        <textarea class=\"form-control\" [(ngModel)]=\"model.Description\" id=\"Description\" name=\"Description\" placeholder=\"请填写简介\"></textarea>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"address\">地址</label>\n        <input class=\"form-control\" [(ngModel)]=\"model.Address\" id=\"Address\" name=\"Address\" placeholder=\"请填写地址\" type=\"text\" #spy>\n      </div>\n      <div class=\"form-group\">\n        <label for=\"tel\">电话</label>\n        <input class=\"form-control\" [(ngModel)]=\"model.Tel\" id=\"Tel\" name=\"Tel\" placeholder=\"请填写电话\" type=\"text\" #spy>\n      </div>\n    </div>\n    <div class=\"card-footer\">\n      <button class=\"btn btn-sm btn-primary\" type=\"submit\" [disabled]=\"!categoryAddForm.form.valid\">\n        <i class=\"fa fa-dot-circle-o\"></i> 保存</button>\n      <button class=\"btn btn-sm btn-danger\" type=\"reset\"><i class=\"fa fa-ban\"></i> 重置</button>\n    </div>\n  </form>\n</div>\n",
+			"file": "src/app/views/categories/category-add.component.html",
 			"file_size": 1445,
-			"file_write_time": 131513297595103154,
+			"file_write_time": 131513479077124944,
 			"settings":
 			{
-				"buffer_size": 1373,
+				"buffer_size": 1369,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<div class=\"card\">\n\t<div class=\"card-header\">\n\t\t<strong>详情</strong>\n\t</div>\n\t<div class=\"card-body\">\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"name\"><b>名称</b></label>\n\t\t\t<div>{{model.Name}}</div>\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"Description\"><b>简介</b></label>\n\t\t\t<div>{{model.Description}}</div>\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"address\"><b>地址</b></label>\n\t\t\t<div>{{model.Address}}</div>\n\t\t</div>\n\t\t<div class=\"form-group\">\n\t\t\t<label for=\"tel\"><b>电话</b></label>\n\t\t\t<div>{{model.Tel}}</div>\n\t\t</div>\n\t</div>\n</div>",
-			"file": "src/app/views/components/restaurants/restaurant-detail.component.html",
-			"file_size": 569,
-			"file_write_time": 131513296073980784,
-			"settings":
-			{
-				"buffer_size": 549,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "import { Component, OnInit, Input } from '@angular/core';\nimport { RequestOptions, RequestMethod, Headers, Http, Response, URLSearchParams } from '@angular/http';\nimport { Router, ActivatedRoute, Params } from '@angular/router';\nimport { Observable } from 'rxjs/Rx';\nimport { Restaurant } from '../../../models/models';\nimport { ModalDirective } from 'ngx-bootstrap/modal/modal.component';\nimport { RestaurantService } from '../../../services/restaurant.service';\nimport { NavigatorService } from '../../../services/navigator.service';\nimport 'rxjs/add/operator/switchMap';\n@Component({\n\tselector: 'app-restaurant-detail',\n\ttemplateUrl: './restaurant-detail.component.html',\n\tstyleUrls: ['./restaurant-detail.component.scss'],\n\tproviders: [RestaurantService, NavigatorService]\n})\nexport class RestaurantDetailComponent implements OnInit {\n\n\tprivate model: Restaurant = new Restaurant();\n\tprivate isEdit: boolean = false;\n\n\tconstructor(public http: Http,\n\t\tprivate router: Router,\n\t\tprivate route: ActivatedRoute,\n\t\tprivate service: RestaurantService,\n\t\tprivate navigatorService: NavigatorService\n\t) { }\n\n\tngOnInit() {\n\t\tthis.route.params\n\t\t\t.switchMap((params: Params) => this.service.getRestaurant(params['id']))\n\t\t\t.subscribe(item => this.model = item);\n\t}\n\n}\n",
-			"file": "src/app/views/components/restaurants/restaurant-detail.component.ts",
-			"file_size": 1262,
-			"file_write_time": 131513204370408098,
-			"settings":
-			{
-				"buffer_size": 1262,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "src/app/models/models.ts",
-			"settings":
-			{
-				"buffer_size": 199,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -225,24 +170,24 @@
 	"command_palette":
 	{
 		"height": 490.0,
-		"last_filter": "typescript",
+		"last_filter": "types",
 		"selected_items":
 		[
-			[
-				"typescript",
-				"TypeScript: Format Document"
-			],
 			[
 				"types",
 				"TypeScript: Format Document"
 			],
 			[
-				"html",
-				"HTMLBeautify"
-			],
-			[
 				"json",
 				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"typescript",
+				"TypeScript: Format Document"
+			],
+			[
+				"html",
+				"HTMLBeautify"
 			],
 			[
 				"package install",
@@ -354,25 +299,56 @@
 	},
 	"expanded_folders":
 	[
-		"/D/leo/works/quickorder/frontend",
-		"/D/leo/study/angularjs/tour-of-hero",
-		"/D/leo/study/angularjs/tour-of-hero/src",
-		"/D/leo/study/angularjs/tour-of-hero/src/app",
-		"/D/leo/study/angularjs/tour-of-hero/src/app/component",
-		"/D/leo/study/angularjs/tour-of-hero/src/app/module",
-		"/D/leo/study/angularjs/tour-of-hero/src/app/service"
+		"/D/leo/study/opensource",
+		"/D/leo/study/opensource/angular-commerce",
+		"/D/leo/study/opensource/angular-commerce/modules",
+		"/D/leo/study/opensource/angular-commerce/modules/products-list-component",
+		"/D/leo/study/opensource/angular-commerce/modules/products-list-component/src"
 	],
 	"file_history":
 	[
+		"/D/leo/works/quickorder/frontend/src/app/views/users/users-routing.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/users/users.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/app.routing.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/components.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/products/products.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/products/products.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/products/products-routing.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/products/products.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/shopping-carts/shopping-carts.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/services/navigator.service.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/restaurants/restaurant-add.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/components-routing.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/restaurants/restaurants-routing.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/categories/categories.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/dinner-tables/dinner-tables.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/categories/categories-routing.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/categories/categories.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/dinner-tables/dinner-tables.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/categories/categories.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/restaurants/restaurants.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/dinner-tables/dinner-tables-routing.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/orders/orders.module.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/restaurants/restaurant-detail.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/app.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/components/app-sidebar/app-sidebar.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/restaurants/restaurants.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-add.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/services/restaurant.service.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurants.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/restaurants/restaurants.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/categories/category-add.component.ts",
+		"/D/leo/works/quickorder/frontend/node_modules/@angular/http/src/http.d.ts",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurants.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-add.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-detail.component.html",
+		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-detail.component.ts",
+		"/D/leo/works/quickorder/frontend/src/app/models/models.ts",
 		"/D/leo/study/angularjs/tour-of-hero/src/app/service/hero.service.ts",
 		"/D/leo/works/quickorder/frontend/src/environments/environment.ts",
 		"/D/leo/works/quickorder/frontend/src/app/shared/services/restaurant.service.ts",
-		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurants.component.ts",
 		"/D/leo/works/angular/angular-demo/src/app/app.component.ts",
-		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurants.component.html",
 		"/D/leo/works/TellmePWD/TellmePWD/packages.config",
-		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-add.component.ts",
-		"/D/leo/works/quickorder/frontend/src/app/views/components/restaurants/restaurant-add.component.html",
 		"/C/Users/lilei/Documents/NetSarang/Xshell/Sessions/crm.2017-09-29.log/crm.2017-09-29.log",
 		"/D/leo/works/WebApplicationAPI/WebApplicationAPI/Global.asax.cs",
 		"/D/leo/works/WebApplicationAPI/WebApplicationAPI/App_Start/WebApiConfig.cs",
@@ -383,7 +359,6 @@
 		"/D/leo/study/opensource/angular-realworld-example-app/src/app/shared/services/api.service.ts",
 		"/D/leo/study/aspnetcoreapp/aspnet-core-angular2-registration-login-example/client/app/_services/user.service.ts",
 		"/D/leo/study/aspnetcoreapp/aspnet-core-angular2-registration-login-example/client/app/app.config.ts",
-		"/D/leo/works/quickorder/frontend/src/app/views/components/components.module.ts",
 		"/D/leo/works/quickorder/frontend/src/app/providers/restaurant.service.ts",
 		"/D/leo/works/quickorder/frontend/src/app/app.config.ts",
 		"/D/leo/works/quickorder/frontend/src/app/providers/api.ts",
@@ -459,39 +434,7 @@
 		"/D/leo/works/angular/my-app/src/app/shared/site-header/site-header.component.html",
 		"/D/leo/works/angular/my-app/src/app/shared/shared.module.ts",
 		"/D/leo/docs/CR/5.7/fs-crm/create-order/arg.json",
-		"/D/leo/docs/CR/5.7/fs-crm/create-order/new-arg.json",
-		"/D/leo/works/angular/my-app/src/app/app.component.css",
-		"/D/leo/works/angular/my-app/src/app/shared/site-footer/site-footer.component.html",
-		"/D/leo/works/angular/angular-hello-world/node_modules/@angular/core/src/metadata/lifecycle_hooks.d.ts",
-		"/D/leo/study/opensource/echoes-player/src/app/app.component.ts",
-		"/D/leo/study/opensource/echoes-player/src/app/core/store/reducers.ts",
-		"/D/leo/study/opensource/echoes-player/src/app/core/services/version-checker.service.ts",
-		"/D/leo/study/opensource/echoes-player/src/app/core/services/youtube-data-api.service.ts",
-		"/D/leo/study/opensource/echoes-player/node_modules/@angular/http/src/http.d.ts",
-		"/D/leo/study/opensource/echoes-player/node_modules/@angular/core/src/di/metadata.d.ts",
-		"/D/leo/study/opensource/CoreUI-Free-Bootstrap-Admin-Template/Angular4_CLI_Full_Project/src/app/layouts/full-layout.component.ts",
-		"/D/leo/works/angular/my-app/src/app/shared/side-menu.component.html",
-		"/D/leo/works/angular/my-app/src/app/udobject/udobject.module.ts",
-		"/D/leo/works/angular/my-app/src/app/my-bi/my-bi.module.ts",
-		"/D/leo/works/angular/my-app/src/app/my-console/my-console.module.ts",
-		"/D/leo/works/angular/my-app/src/app/my-notification/my-notification.module.ts",
-		"/D/leo/works/angular/my-app/src/contact.html",
-		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/@angular/http/src/static_response.d.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/chartjs/chartjs.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/dashboard/dashboard.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/icons/icons-routing.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/icons/icons.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/pages/pages-routing.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/pages/pages.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/ngx-bootstrap/tabs/tabs.module.d.ts",
-		"/D/leo/works/client-web/src/app/app.component.ts",
-		"/D/leo/works/client-web/src/app/app.component.html",
-		"/D/leo/works/client-web/src/app/app.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/app.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/components/tables.component.html",
-		"/D/leo/works/MetadataPlatform/metadata-web/src/app/components/components.module.ts",
-		"/D/leo/works/MetadataPlatform/metadata-web/node_modules/@angular/cli/blueprints/ng/files/__path__/app/app.module.ts",
-		"/D/leo/works/client-web/src/app/model/udobject.model.ts"
+		"/D/leo/docs/CR/5.7/fs-crm/create-order/new-arg.json"
 	],
 	"find":
 	{
@@ -516,6 +459,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"restaurantAdd",
 			"2017-08-314642xs",
 			"ApiService",
 			"group",
@@ -648,6 +592,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"categoryAdd",
 			"item.name",
 			"4.1.3",
 			"\"",
@@ -698,25 +643,31 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/app/views/components/restaurants/restaurant-add.component.ts",
+					"file": "src/app/views/dinner-tables/dinner-tables.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1351,
+						"buffer_size": 1312,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1253,
-								1253
+								387,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"translate_tabs_to_spaces": false,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": false,
+								"indentSize": 4,
+								"tabSize": 4
+							},
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
@@ -728,24 +679,86 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/app/services/navigator.service.ts",
+					"file": "src/app/views/categories/categories.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 448,
+						"buffer_size": 1343,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								448,
-								448
+								388,
+								388
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 54.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/views/categories/categories.component.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1880,
+								1880
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 17.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/views/categories/categories.module.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 639,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								639,
+								639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"translate_tabs_to_spaces": false,
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
@@ -756,79 +769,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "src/app/components/app-sidebar/app-sidebar.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5774,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1163,
-								1163
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/app/services/restaurant.service.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1897,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								819,
-								819
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "src/app/views/components/restaurants/restaurants.component.ts",
+					"file": "src/app/views/categories/category-add.component.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1314,
+						"buffer_size": 1332,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1200,
-								1200
+								851,
+								851
 							]
 						],
 						"settings":
@@ -844,64 +798,27 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 108.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "src/app/views/components/components.module.ts",
-					"semi_transient": false,
+					"file": "/D/leo/study/opensource/angular-commerce/modules/products-list-component/src/products-list.component.ts",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 2547,
+						"buffer_size": 4203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2186,
-								2186
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							},
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 378.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "src/app/views/components/components-routing.module.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3252,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3121,
-								2404
+								994,
+								994
 							]
 						],
 						"settings":
@@ -915,55 +832,52 @@
 						"translation.y": 1188.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/Users/lilei/Downloads/hosts20170918 (1)/hosts20170918/hosts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 730308,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								730308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "node_modules/@angular/http/src/http.d.ts",
+					"file": "src/app/views/categories/category-add.component.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5105,
+						"buffer_size": 1369,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3784,
-								3784
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1195.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 12,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "src/app/views/components/restaurants/restaurants.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1895,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								904,
-								904
+								1369,
+								1369
 							]
 						],
 						"settings":
@@ -976,130 +890,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "src/app/views/components/restaurants/restaurant-add.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1373,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								983,
-								983
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "src/app/views/components/restaurants/restaurant-detail.component.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 549,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								549,
-								549
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"typescript_plugin_format_options":
-							{
-								"convertTabsToSpaces": false,
-								"indentSize": 4,
-								"tabSize": 4
-							}
-						},
-						"translation.x": 0.0,
-						"translation.y": 108.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 11,
-					"file": "src/app/views/components/restaurants/restaurant-detail.component.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1262,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1193,
-								1193
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 12,
-					"file": "src/app/models/models.ts",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 199,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								199,
-								199
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
-							"translate_tabs_to_spaces": false,
-							"use_tab_stops": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 11,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -1152,7 +943,7 @@
 	"project": "quickorder-frontend.sublime-project",
 	"replace":
 	{
-		"height": 53.0
+		"height": 93.0
 	},
 	"save_all_on_build": true,
 	"select_file":

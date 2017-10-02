@@ -8,6 +8,7 @@ import { RestaurantsRoutingModule } from './restaurants-routing.module';
 import { RestaurantsComponent } from './restaurants.component';
 import { RestaurantAddComponent } from './restaurant-add.component';
 import { RestaurantDetailComponent } from './restaurant-detail.component';
+import { PagingNavComponent } from '../../components/paging-nav/paging-nav.component';
 
 @NgModule({
 	imports: [
@@ -19,7 +20,8 @@ import { RestaurantDetailComponent } from './restaurant-detail.component';
 	declarations: [
 		RestaurantsComponent,
 		RestaurantAddComponent,
-		RestaurantDetailComponent
+		RestaurantDetailComponent,
+		PagingNavComponent
 	]
 })
 export class RestaurantsModule { }

@@ -12,12 +12,19 @@
         </div>
       </div>
       <div class="card-body">
+                <app-paging-nav 
+        [pageIndex]="this.pageIndex" 
+        [totalCount]="this.totalCount" 
+        [pageSize]="this.pageSize" 
+        (change)="bindpage($event)"></app-paging-nav>
         <table class="table table-bordered table-striped table-sm">
           <thead>
             <tr>
               <th>名称</th>
               <th>地址</th>
               <th>电话</th>
+              <th>创建时间</th>
+              <th>更新时间</th>
               <th>操作</th>
             </tr>
           </thead>
@@ -26,24 +33,15 @@
               <td>{{item.Name}}</td>
               <td>{{item.Address}}</td>
               <td>{{item.Tel}}</td>
+              <td>{{item.CreateTime}}</td>
+              <td>{{item.UpdateTime}}</td>
               <td>
                 <button class="btn btn-info btn-sm" (click)="edit(item);$event.stopPropagation()">编辑</button> |  <button class="btn btn-danger btn-sm" (click)="delete(item);$event.stopPropagation()">删除</button> 
               </td>
             </tr>
           </tbody>
         </table>
-        <nav>
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
-        </nav>
+
       </div>
     </div>
   </div>
